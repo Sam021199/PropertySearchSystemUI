@@ -1,0 +1,85 @@
+
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+      <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script> -->
+  
+      <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
+  
+      <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">   
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script> -->
+  
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    </head>
+    <body class="p-3 m-0 border-0 bd-example">
+  
+      <h1 style="text-align: center;">Search for the property</h1>
+      <h4>Your destination lies here...</h4>
+  
+      <form class="size">
+        <div class="mb-3" >
+          <label for="userName" class="form-label">Type property details here..</label>
+          <!-- <input type="search" class="form-control" placeholder="Search"> -->
+          <input type="text" class="form-control" name="search" [(ngModel)]="searchText" placeholder="Search here...">
+        </div>
+      
+     <button type="submit" class="btn btn-primary" style="margin-left:30%;">Search</button>
+     
+      </form><br>
+  
+      <div class="container">
+        <div class="row">
+          <!-- <div class="search-property">
+            <input type="text" name="search" [(ngModel)]="searchText" placeholder="search by address">
+          </div> -->
+      <table class="table table-stripped">
+  
+        <thead>
+  
+            <tr>
+                <th scope="col">Prop_Id:</th>
+                <th scope="col">Owner First Name:</th>
+                <th scope="col">Owner Last Name:</th>
+                <th scope="col">Prop Address:</th>
+                <th scope="col">Prop Type:</th>
+                <th scope="col">Prop Legal Desc:</th>
+                <th scope="col">Prop Tax Amount:</th>
+                <th scope="col">Prop Tax Paid Status:</th> 
+                <th scope="col">Prop Tax Paid By:</th>  
+ 
+            </tr>
+        </thead>
+        <tbody>
+  
+            <tr *ngFor="let data of propertyDetails | filter:searchText">
+  
+                <th scope="row">{{data.propId}}</th>
+                <td>{{data.ownerFirstName}}</td>
+                <td>{{data.ownerLastName}}</td>
+                <td>{{data.propAddress}}</td>
+                <td>{{data.propType}}</td>
+                <td>{{data.propLegalDesc}}</td>
+                <td>{{data.propTaxAmount}}</td>
+                <td>{{data.propTaxPaidStatus}}</td>
+                <td>{{data.propTaxPaidBy}}</td>
+  
+  
+            </tr>   
+        </tbody>
+    </table>
+    </div>
+    </div>
+    </body>
+  </html>
+  

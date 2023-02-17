@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <title>Bootstrap Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+
+  <body class="p-3 m-0 border-0 bd-example">
+
+    <h1 style="text-align: center;">Update Details</h1>
+
+    
+
+    <form class="size" #data="ngForm" (ngSubmit)="onSubmit(data.value)">
+        <div class="mb-3">
+        <label for="ownerFirstName" class="form-label">Owner_First_Name:</label>
+        <input type="text" class="form-control" name="ownerFirstName" [(ngModel)]="PropertyDetails.ownerFirstName">
+       </div>
+
+       <div class="mb-3">
+        <label for="ownerFirstName" class="form-label">Owner_Last_Name:</label>
+        <input type="text" class="form-control" name="ownerLastName" [(ngModel)]="PropertyDetails.ownerLastName">
+        </div>
+
+        <div class="mb-3">
+       <label for="propAddress" class="form-label">Prop_Address:</label>
+       <input type="text" class="form-control" name="propAddress" [(ngModel)]="PropertyDetails.propAddress">
+       </div>
+
+       <div class="mb-3">
+       <label for="propType" class="form-label">Prop_Type:</label>
+       <input type="text" class="form-control" name="propType" [(ngModel)]="PropertyDetails.propType">
+       </div>
+
+       <div class="mb-3">
+       <label for="propLegalDesc" class="form-label">Prop_Legal_Desc:</label>
+       <input type="text" class="form-control" name="propLegalDesc" [(ngModel)]="PropertyDetails.propLegalDesc">
+        </div>
+
+        <div class="mb-3">
+       <label for="propTaxAmount" class="form-label">Prop_Tax_Amount:</label>
+       <input type="number" class="form-control" name="propTaxAmount" [(ngModel)]="PropertyDetails.propTaxAmount">
+        </div>
+
+        <div class="mb-3">
+       <label for="propTaxPaidStatus" class="form-label">Prop_Tax_Paid_Status:</label>
+       <input type="boolean" class="form-control" name="propTaxPaidStatus" [(ngModel)]="PropertyDetails.propTaxPaidStatus">
+        </div>
+
+        <div class="mb-3">
+          <label for="propTaxPaidStatus" class="form-label">Prop_Tax_Paid_By:</label>
+          <input type="text" class="form-control" name="propTaxPaidBy" [(ngModel)]="PropertyDetails.propTaxPaidBy">
+           </div>
+       
+       <button type="submit" class="btn btn-primary">Submit</button>
+    
+    </form>
+
+    </body>
+</html>
+<!-- <div>
+    <form>
+       <input type="text" name="Owner_First_Name">
+       <input type="text" name="Owner_Last_Name" >
+       <input type="text" name="Prop_Address" >
+       <input type="text" name="Prop_Type">
+       <input type="text" name="Prop_Legal_Desc">
+       <input type="text" name="Prop_Tax_Amount">
+       <input type="text" name="Prop_Tax_Paid_Status">
+             
+    </form>
+</div> -->
